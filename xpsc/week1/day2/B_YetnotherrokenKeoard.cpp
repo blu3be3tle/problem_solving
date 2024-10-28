@@ -1,3 +1,5 @@
+// https://codeforces.com/problemset/problem/1907/B
+
 #include <bits/stdc++.h>
 #define fastIO               \
     ios::sync_with_stdio(0); \
@@ -18,7 +20,7 @@ int main()
         string result;
         int lc = 0, uc = 0;
 
-        for (int i = s.size() - 1; i >= 0; --i)
+        for (int i = s.size() - 1; i >= 0; i--)
         {
             char c = s[i];
             if (c == 'b')
