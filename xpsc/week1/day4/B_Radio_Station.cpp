@@ -1,3 +1,4 @@
+// https://codeforces.com/contest/918/problem/B
 #include <bits/stdc++.h>
 #define fastIO               \
     ios::sync_with_stdio(0); \
