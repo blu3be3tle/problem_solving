@@ -9,8 +9,7 @@ using namespace std;
 
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+    fastIO;
     int n;
     ll k;
     cin >> n >> k;
@@ -22,11 +21,11 @@ int main()
 
     int l = 0, r = 0;
     ll ans = 0;
-    multiset<ll> ml;
+    multiset<ll> ms;
     while (r < n)
     {
-        ml.insert(a[r]);
-        ll mn = *ml.begin(), mx = *ml.rbegin();
+        ms.insert(a[r]);
+        ll mn = *ms.begin(), mx = *ms.rbegin();
         if (mx - mn <= k)
         {
             ans += (r - l + 1);
@@ -35,15 +34,15 @@ int main()
         {
             while (l <= r)
             {
-                mn = *ml.begin(), mx = *ml.rbegin();
+                mn = *ms.begin(), mx = *ms.rbegin();
                 if (mx - mn <= k)
                 {
                     break;
                 }
-                ml.erase(ml.find(a[l]));
+                ms.erase(ms.find(a[l]));
                 l++;
             }
-            mn = *ml.begin(), mx = *ml.rbegin();
+            mn = *ms.begin(), mx = *ms.rbegin();
             if (mx - mn <= k)
             {
                 ans += (r - l + 1);
