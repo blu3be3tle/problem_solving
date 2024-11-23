@@ -14,7 +14,7 @@ int main()
     cin >> t;
     while (t--)
     {
-        ll a, b, n, x, ans = 0;
+        ll a, b, n, ans = 0;
         cin >> a >> b >> n;
         vector<int> vec(n);
         if (b >= a)
