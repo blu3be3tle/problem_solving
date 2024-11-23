@@ -16,19 +16,22 @@ int main()
     {
         ll a, b, n, x, ans = 0;
         cin >> a >> b >> n;
+        vector<int> vec(n);
+        if (b >= a)
+        {
+            ans = a;
+            b = a;
+        }
+        else
+            ans = b;
         for (int i = 0; i < n; i++)
         {
-            cin >> x;
-            if ((b + x) <= a)
-            {
-                ans += x;
-            }
+            cin >> vec[i];
+            if (vec[i] + 1 <= a)
+                ans += vec[i];
             else
-            {
-                ans += a;
-            }
+                ans += a - 1;
         }
-        ans += (b - 1);
         cout << ans << endl;
     }
 
