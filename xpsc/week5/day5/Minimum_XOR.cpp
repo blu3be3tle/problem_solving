@@ -6,7 +6,7 @@
 using namespace std;
 #define endl '\n'
 #define ll long long
-int findMinimumXOR(vector<int> &nums)
+int findMinXOR(vector<int> &nums)
 {
     int n = nums.size();
     sort(nums.begin(), nums.end());
@@ -43,7 +43,7 @@ int main()
             cin >> a;
             nums.push_back(a);
         }
-        int result = findMinimumXOR(nums);
+        int result = findMinXOR(nums);
         cout << result << endl;
     }
     return 0;
