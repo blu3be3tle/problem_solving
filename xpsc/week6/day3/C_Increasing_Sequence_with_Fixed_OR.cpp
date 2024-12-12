@@ -20,12 +20,12 @@ int main()
     {
         long long n;
         cin >> n;
-        deque<long long> ans;
+        deque<ll> ans;
         for (int k = 0; k <= __lg(n); k++)
         {
             if ((n >> k) & 1)
             {
-                long long value = n - (1LL << k);
+                ll value = n - (1LL << k);
                 if (value > 0)  
                 {
                     ans.push_front(value);
