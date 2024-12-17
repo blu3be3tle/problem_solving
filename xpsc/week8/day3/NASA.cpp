@@ -5,6 +5,11 @@
     cout.tie(0);
 using namespace std;
 #define endl '\n'
+#define tc    \
+    ll t;     \
+    cin >> t; \
+    while (t--)
+#define ll long long
 const int maxN = (1LL << 15);
 
 vector<int> allPalindrome;
@@ -36,20 +41,16 @@ void markPalindrome()
 int main()
 {
     fastIO;
-
     markPalindrome();
-
-    int t;
-    cin >> t;
-    while (t--)
+    tc
     {
         int n;
         cin >> n;
-        vector<int> a(n), cnt(maxN + 1);
+        vector<int> a(n), count(maxN + 1);
         for (int i = 0; i < n; i++)
         {
             cin >> a[i];
-            cnt[a[i]]++;
+            count[a[i]]++;
         }
 
         long long ans = n;
@@ -58,11 +59,11 @@ int main()
             for (int j = 0; j < allPalindrome.size(); j++)
             {
                 int curr = (a[i] ^ allPalindrome[j]);
-                ans += cnt[curr];
+                ans += count[curr];
             }
         }
 
-        cout << (ans / 2) << '\n';
+        cout << (ans / 2) << endl;
     }
     return 0;
 }
