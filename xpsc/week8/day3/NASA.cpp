@@ -53,7 +53,7 @@ int main()
             count[a[i]]++;
         }
 
-        long long ans = n;
+        ll ans = n;
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < allPalindrome.size(); j++)
