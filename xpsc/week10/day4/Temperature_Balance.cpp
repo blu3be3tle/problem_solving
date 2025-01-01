@@ -19,8 +19,10 @@ int main()
         int n;
         cin >> n;
         vector<ll> a(n);
-        for (auto &x : a)
-            cin >> x;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> a[i];
+        }
 
         ll prefixSum = 0;
         ll totalOps = 0;
