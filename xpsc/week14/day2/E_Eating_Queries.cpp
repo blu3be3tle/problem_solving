@@ -21,13 +21,11 @@ int main()
         int n, q;
         cin >> n >> q;
         vector<int> a(n), prefix(n + 1);
-        for (int i = 0; i < n; i++)
-        {
-            cin >> a[i];
-        }
+        for (auto &x : a)
+            cin >> x;
 
         sort(a.rbegin(), a.rend());
-        
+
         for (int i = 1; i <= n; i++)
         {
             prefix[i] = prefix[i - 1] + a[i - 1];
