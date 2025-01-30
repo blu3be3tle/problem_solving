@@ -21,21 +21,19 @@ int main()
         int n;
         cin >> n;
         vector<int> a(n);
-        for (int i = 0; i < n; ++i)
-        {
-            cin >> a[i];
-        }
+        for (auto &x : a)
+            cin >> x;
 
-        int countDecreases = 0;
+        int count = 0;
         for (int i = 0; i < n - 1; ++i)
         {
             if (a[i] > a[i + 1])
             {
-                countDecreases++;
+                count++;
             }
         }
 
-        if (countDecreases > 1)
+        if (count > 1)
         {
             cout << "No" << endl;
         }
@@ -43,18 +41,11 @@ int main()
         {
 
             if (a[n - 1] > a[0])
-            {
-                countDecreases++;
-            }
-
-            if (countDecreases > 1)
-            {
+                count++;
+            if (count > 1)
                 cout << "No" << endl;
-            }
             else
-            {
                 cout << "Yes" << endl;
-            }
         }
     }
 
