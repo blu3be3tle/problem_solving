@@ -10,8 +10,8 @@ using namespace std;
     cin >> t; \
     while (t--)
 #define ll long long
-#define yes cout << "YES" << endl
-#define no cout << "NO" << endl
+#define yes cout << "Yes" << endl
+#define no cout << "No" << endl
 
 int main()
 {
@@ -35,7 +35,7 @@ int main()
 
         if (count > 1)
         {
-            cout << "No" << endl;
+            no;
         }
         else
         {
@@ -43,9 +43,9 @@ int main()
             if (a[n - 1] > a[0])
                 count++;
             if (count > 1)
-                cout << "No" << endl;
+                no;
             else
-                cout << "Yes" << endl;
+                yes;
         }
     }
 
