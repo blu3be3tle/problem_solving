@@ -21,7 +21,7 @@ void solve()
     unordered_map<int, int> freq;
     int found = -1;
 
-    for (int i = 0; i < n; ++i)
+    for (int i = 0; i < n; i++)
     {
         cin >> a[i];
         freq[a[i]]++;
@@ -33,12 +33,12 @@ void solve()
 
     if (found != -1)
     {
-        cout << "1\n"
-             << found << "\n";
+        cout << 1 << endl
+             << found << endl;
     }
     else
     {
-        cout << "-1\n";
+        cout << -1 << endl;
     }
 }
 
