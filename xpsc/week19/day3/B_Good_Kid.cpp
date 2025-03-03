@@ -21,7 +21,7 @@ int main()
         int n;
         cin >> n;
         vector<int> a(n);
-        int add = 0, ans = 1, min = INT_MAX;
+        int ans = 1;
         for (auto &x : a)
         {
             cin >> x;
